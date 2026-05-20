@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h1>Category List</h1>
+  <ul>
+    {% for recipe in category %}
+      <li>{{ recipe.title }}</li>
+    {% empty %}
+      <li>No recipes found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
